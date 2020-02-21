@@ -82,3 +82,15 @@ topics:
   - name: Electron
     web_url: https://github.com/topics/electron
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/electron/electron.png
+
+  - name: Firebase
+    web_url: https://github.com/topics/firebase
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png
+
+  - name: Openfire
+    web_url: https://github.com/topics/openfire
+    image_url: https://dyltqmyl993wv.cloudfront.net/assets/stacks/openfire/img/openfire-stack-220x234.png
+
+  - name: Sass
+    web_url: https://github.com/topics/sass
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png
