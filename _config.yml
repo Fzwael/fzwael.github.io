@@ -81,7 +81,7 @@ topics:
     
   - name: Electron
     web_url: https://github.com/topics/electron
-    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/electron/electron.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/Electron_0.36.4_Icon.png
 
   - name: Firebase
     web_url: https://github.com/topics/firebase
