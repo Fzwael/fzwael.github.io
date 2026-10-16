@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wael Fezai</title>
+  <meta name="description" content="Wael Fezai, senior front-end developer at Odigo in Lyon, France. Angular, TypeScript and modern web apps.">
+  <meta property="og:title" content="Wael Fezai">
+  <meta property="og:description" content="Senior front-end developer at Odigo in Lyon, France.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/11984138?v=4">
+  <meta property="og:url" content="https://fzwael.github.io/">
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='white'%3EWF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #18181b;
+      --muted: #5f5f68;
+      --border: #e7e5e4;
+      --accent: #4f46e5;
+      --accent-soft: #eef2ff;
+      --shadow: 0 1px 2px rgb(0 0 0 / .04), 0 4px 16px rgb(0 0 0 / .04);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0d10;
+        --surface: #13161b;
+        --text: #ececef;
+        --muted: #9a9aa5;
+        --border: #23272e;
+        --accent: #8b8cf8;
+        --accent-soft: #1c1e3a;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 20px 48px;
+    }
+
+    /* Intro */
+    .intro { display: flex; flex-direction: column; gap: 20px; }
+    .avatar {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+    .role { margin: 6px 0 0; color: var(--muted); font-size: 1.05rem; }
+    .role a { text-decoration: none; border-bottom: 1px solid var(--border); }
+    .role a:hover { color: var(--accent); border-color: var(--accent); }
+    .bio { margin: 0; font-size: 1.05rem; max-width: 56ch; }
+
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .links a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      text-decoration: none;
+      font-size: .9rem; font-weight: 500;
+      transition: border-color .15s, color .15s;
+    }
+    .links a:hover { border-color: var(--accent); color: var(--accent); }
+    .links svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+
+    /* Sections */
+    section { margin-top: 64px; }
+    h2 {
+      margin: 0 0 16px;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .projects { display: grid; gap: 12px; }
+    .project {
+      display: block;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: border-color .15s, transform .15s;
+    }
+    .project:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .project-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
+    .project h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+    .project p { margin: 4px 0 0; color: var(--muted); font-size: .95rem; }
+    .meta { display: flex; gap: 14px; color: var(--muted); font-size: .85rem; white-space: nowrap; }
+    .meta span { display: inline-flex; align-items: center; gap: 5px; }
+    .meta svg { width: 14px; height: 14px; fill: currentColor; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+    .stack { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .stack li {
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .875rem; font-weight: 500;
+    }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/11984138?v=4" alt="Wael Fezai" width="88" height="88">
+      <div>
+        <h1>Wael Fezai</h1>
+        <p class="role">Senior front-end developer at <a href="https://www.odigo.com/">Odigo</a> · Lyon, France</p>
+      </div>
+      <p class="bio">
+        I build modern web applications, mostly with Angular and TypeScript.
+        I enjoy clean interfaces, well-tested code, and small tools that make
+        developers' lives easier. Always learning, and always happy to collaborate on open source.
+      </p>
+      <nav class="links" aria-label="Contact and profiles">
+        <a href="https://github.com/Fzwael">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/fzwael">
+          <svg viewBox="0 0 19 18" aria-hidden="true"><path d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://stackoverflow.com/users/5932738">
+          <svg viewBox="20 12 76 92" aria-hidden="true"><path d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"/><path d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"/></svg>
+          Stack Overflow
+        </a>
+        <a href="mailto:fzwael@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.6-8-5.6zM5.3 7 12 11.7 18.7 7H5.3z"/></svg>
+          Email
+        </a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">Open source</h2>
+      <div class="projects">
+        <a class="project" href="https://github.com/Fzwael/deno-check-updates" data-repo="deno-check-updates">
+          <div class="project-head">
+            <h3>deno-check-updates</h3>
+            <div class="meta">
+              <span><i class="dot" style="background:#3178c6"></i>TypeScript</span>
+              <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .67.42l1.88 3.8 4.2.61a.75.75 0 0 1 .41 1.28l-3.04 2.96.72 4.18a.75.75 0 0 1-1.09.79L8 12.3l-3.75 1.97a.75.75 0 0 1-1.09-.79l.72-4.18L.84 6.36a.75.75 0 0 1 .41-1.28l4.2-.61L7.33.67A.75.75 0 0 1 8 .25z"/></svg><b class="stars">14</b></span>
+            </div>
+          </div>
+          <p>Automatically checks Deno dependency versions from an import map file.</p>
+        </a>
+        <a class="project" href="https://github.com/Fzwael/angular-bdd" data-repo="angular-bdd">
+          <div class="project-head">
+            <h3>angular-bdd</h3>
+            <div class="meta">
+              <span><i class="dot" style="background:#3178c6"></i>TypeScript</span>
+              <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .67.42l1.88 3.8 4.2.61a.75.75 0 0 1 .41 1.28l-3.04 2.96.72 4.18a.75.75 0 0 1-1.09.79L8 12.3l-3.75 1.97a.75.75 0 0 1-1.09-.79l.72-4.18L.84 6.36a.75.75 0 0 1 .41-1.28l4.2-.61L7.33.67A.75.75 0 0 1 8 .25z"/></svg><b class="stars">11</b></span>
+            </div>
+          </div>
+          <p>Behaviour-driven development with Angular and CucumberJS.</p>
+        </a>
+        <a class="project" href="https://github.com/Fzwael/ngx-emoji-button" data-repo="ngx-emoji-button">
+          <div class="project-head">
+            <h3>ngx-emoji-button</h3>
+            <div class="meta">
+              <span><i class="dot" style="background:#3178c6"></i>TypeScript</span>
+            </div>
+          </div>
+          <p>An Angular wrapper for the emoji-button picker.</p>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="stack-title">
+      <h2 id="stack-title">Tools I work with</h2>
+      <ul class="stack">
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>SCSS</li>
+        <li>Node.js</li>
+        <li>Deno</li>
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>Docker</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year">2026</span> Wael Fezai
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Refresh star counts from the GitHub API. The numbers in the HTML are the fallback.
+    fetch('https://api.github.com/users/Fzwael/repos?per_page=100')
+      .then(r => r.ok ? r.json() : [])
+      .then(repos => {
+        const stars = Object.fromEntries(repos.map(r => [r.name, r.stargazers_count]));
+        document.querySelectorAll('.project[data-repo]').forEach(el => {
+          const count = el.querySelector('.stars');
+          if (count && el.dataset.repo in stars) count.textContent = stars[el.dataset.repo];
+        });
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>
